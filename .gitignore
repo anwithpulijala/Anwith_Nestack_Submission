@@ -1,0 +1,34 @@
+# Environment & Local Configuration
+.env
+.env.*
+
+# Python Virtual Environments
+venv/
+.venv/
+
+# Python Bytecode & Test Caches
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+
+# Vector Store (Generated locally during ingestion)
+vectorstore/
+!vectorstore/.gitkeep
+
+# Frontend & UI Dashboards (Local only, excluded from Git tracking)
+frontend/
+static/
+
+# Frontend Dependency & Build Artifacts (if generated locally)
+node_modules/
+dist/
+build/
+.parcel-cache/
+.vite/
+
+# Workspace & Agent Instruction Files
+AGENTS.md
+
+# Experimental Evaluation Scripts
+eval_chunk_sizes.py

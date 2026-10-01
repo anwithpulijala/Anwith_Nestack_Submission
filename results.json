@@ -1,0 +1,86 @@
+[
+  {
+    "query": "What are the four classes detected by the YOLOv8l model?",
+    "top_k": 3,
+    "results": [
+      {
+        "chunk_text": "YOLOv8l is a large variant of the YOLOv8 family and is designed to provide higher \ndetection accuracy through deeper feature extraction and stronger learning capability. It \nis widely used in computer vision applications where both speed and precision are \nimportant. \nIn this project, YOLOv8l was trained to detect four important classes: helmet, no-\nhelmet, rider, and number plate. The model processes images and video frames to \ngenerate bounding boxes, class labels, and confidence scores. These outputs are further \nused for rider tracking, number plate recognition, and violation monitoring.",
+        "page_number": 27,
+        "score": 0.753327
+      },
+      {
+        "chunk_text": "violation dataset used in this project. \n4.3.2 Architecture of YOLOv8l \nThe architecture of YOLOv8l consists of three major components: Backbone, Neck, and \nHead. These components work together to perform accurate and fast object detection. \n1. Backbone:  \nThe backbone extracts meaningful visual features from the input image such as \nedges, shapes, textures, and object structures. Since YOLOv8l has a deeper \nbackbone, it can capture richer features for improved detection performance.",
+        "page_number": 28,
+        "score": 0.761648
+      },
+      {
+        "chunk_text": "6GB Laptop GPU \n \nDuring training, the model learned to detect four custom classes: helmet, no-helmet, rider, \nand number plate. After successful completion of training, the best -performing weights \nwere selected for model evaluation and real-time deployment. \n4.5 MODEL EV ALUATION \nAfter training, the performance of the YOLOv8l model was evaluated using standard \nobject detection metrics. The model was tested on unseen images from the testing dataset \nto measure its detection capability and generalization performance. The major evaluation \nmetrics used in this project are listed below: \n\u2022 Precision (P): Measures the accuracy of positive detections. \n\u2022 Recall (R):  Measures the ability to detect all relevant objects present in the \ndataset.",
+        "page_number": 30,
+        "score": 0.780721
+      }
+    ]
+  },
+  {
+    "query": "What is the dataset size and how is it divided into training, validation, and testing sets?",
+    "top_k": 3,
+    "results": [
+      {
+        "chunk_text": "3 Validation Set \n(20%) 2,878 Images Used for tuning performance \n4 Testing Set \n(10%) 1,440 Images Used for final testing \n5 Number of \nClasses 4 Helmet, No-Helmet, Number \nPlate, Rider \n6 Data Source Public + Custom \nImages Real traffic monitoring data \n7 Image \nConditions \nDay/Night, Blur, \nShadows, Angles Improves robustness \n8 Dataset Type Annotated Object \nDetection Dataset Prepared using Roboflow",
+        "page_number": 26,
+        "score": 0.97393
+      },
+      {
+        "chunk_text": "environments. The data collection process focused on capturing realistic road conditions \nunder different situations such as urban roads, highways, traffic junctions, and crowded \nstreets. Images with variations in lighting, camera angles,  motion blur, etc were also \nincluded to improve model generalization. This diversedataset helps the model learn \nrobust features and perform accurately in real-time traffic violation detection.  \nTable 4.1: Data Collection \nS.No Category Details Remarks \n1 Total Images 14,392 Complete dataset collected for \ntraining and evaluation \n2 Training Set \n(70%) 10,074 Images Used for model learning \n3 Validation Set \n(20%) 2,878 Images Used for tuning performance \n4 Testing Set \n(10%) 1,440 Images Used for final testing \n5 Number of",
+        "page_number": 26,
+        "score": 1.174587
+      },
+      {
+        "chunk_text": "21 \n \nTable 4.2: Model Training Parameters \nParameter Description Value Used \nModel YOLOv8l Large variant used for high \naccuracy detection \nImage Size Input image resolution 640 \u00d7 640 px \nBatch Size Number of images processed per \niteration 8 \nEpochs Number of complete passes \nthrough dataset 120 \nOptimizer Algorithm for updating weights Adam / SGD \nLearning \nRate Speed of weight updates 0.001 \nWorkers Parallel data loading threads 8 \nLoss Function Calculates prediction error Box Loss + Class Loss + DFL \nAugmentation Data transformations Flip, rotate, brightness \nPatience Early stopping parameter 20 \nDevice GPU used for final training NVIDIA GeForce RTX 3050 \n6GB Laptop GPU \n \nDuring training, the model learned to detect four custom classes: helmet, no-helmet, rider,",
+        "page_number": 30,
+        "score": 1.179572
+      }
+    ]
+  },
+  {
+    "query": "What technologies are used in the system?",
+    "top_k": 3,
+    "results": [
+      {
+        "chunk_text": "2.1 EXISTING SYSTEMS ........................................................................................... 2 \n2.2 LIMITATIONS OF EXISTING SYSTEMS ........................................................... 3 \n2.2.1 Sensitivity to Lighting Conditions ................................................................... 3 \n2.2.2 High Computational Requirements ................................................................. 3 \n2.2.3 Motion Blur and Camera Quality Issues .......................................................... 3 \n2.2.4 Limited Multi-Violation Detection .................................................................. 3 \n2.2.5 Poor Performance Under Occlusion ................................................................ 3",
+        "page_number": 4,
+        "score": 1.278459
+      },
+      {
+        "chunk_text": "iii \n \nLIST OF TABLES \n \nTable No Table Name Page No \nTable 2.1 Summary of Existing Systems 2 \nTable 3.1 Software Requirements 15 \nTable 3.2 Hardware Requirements 16 \nTable 4.1 Data Collection 17 \nTable 4.2 Model Training Parameters 21 \nTable 4.3 Evaluation Metrics 22 \nTable 5.2 Database Fields 27 \nTable 5.3 Functional Testing 29 \nTable 5.4 Performance Testing 30 \nTable 6.1 Model Performance 32 \nTable 6.2 Comparative Analysis of Detection Models 34",
+        "page_number": 9,
+        "score": 1.32627
+      },
+      {
+        "chunk_text": "3.4.2 Software Requirements .................................................................................. 15 \n3.4.3 Hardware Requirements ................................................................................ 16 \nCHAPTER 4: METHODOLOGY .............................................................................. 17 \n4.1 DATA COLLECTION .......................................................................................... 17 \n4.2 DATA PREPROCESSING.................................................................................... 18 \n4.3 MODEL DESCRIPTION ..................................................................................... 18 \n4.3.1 Overview of YOLOv8l .................................................................................. 19",
+        "page_number": 5,
+        "score": 1.358493
+      }
+    ]
+  },
+  {
+    "query": "What are the main objectives of the proposed traffic violation detection system?",
+    "top_k": 3,
+    "results": [
+      {
+        "chunk_text": "A Major Project report on \n \nAI-Based Smart Traffic Violation Detection and \nMonitoring System   \n \nMajor Project submitted to Anurag University in Partial fulfillment of the \nrequirements for the award of the Degree of Bachelor of Technology in \nArtificial Intelligence and Machine Learning. \n \n \n      Submitted by \n    ANWITH PULIJALA    22EG107C49 \n \n \nUnder the Guidance of \nMrs. S. Vijitha \nAssistant professor \n \n \n \nDepartment of Artificial Intelligence \nSchool Of Engineering \nANURAG UNIVERSITY \n2022-2026",
+        "page_number": 1,
+        "score": 0.694832
+      },
+      {
+        "chunk_text": "identification of violations. \n10. To design a scalable solution that can be integrated into smart traffic management \nsystems and future smart city infrastructures.",
+        "page_number": 15,
+        "score": 0.704609
+      },
+      {
+        "chunk_text": "require high computational resources, making large-scale deployment difficult. \nTherefore, there is a need for an intelligent, accurate, and scalable traffic \nmonitoring solution that can automatically detect multiple violations in real time. The \nsystem should be capable of identifying riders, checking helmet usage, tracking violations \nacross frames, and extracting number plate details for proper enforcement. Such a \nsolution can reduce dependence on manual monitoring, improve traffic rule enforcement, \nand enhance overall road safety.",
+        "page_number": 14,
+        "score": 0.717966
+      }
+    ]
+  }
+]
