@@ -70,12 +70,17 @@ def get_vectorstore_instance():
         )
 
     if _vectorstore is None:
+        print("[query] Initializing embedding model", flush=True)
         embeddings = get_embedding_model()
+        print("[query] Embedding model initialized", flush=True)
+
+        print("[query] Opening vector store", flush=True)
         _vectorstore = Chroma(
             collection_name=config.COLLECTION_NAME,
             persist_directory=str(persist_path.resolve()),
             embedding_function=embeddings
         )
+        print("[query] Vector store opened", flush=True)
 
     return _vectorstore
 
@@ -94,8 +99,10 @@ def query_endpoint(request: QueryRequest) -> List[ChunkResult]:
     Directly retrieves top-k raw matching chunks with their page numbers and vector store scores.
     Uses direct similarity search without LLM chains.
     """
+    print("[query] Request received", flush=True)
     vs = get_vectorstore_instance()
 
+    print("[query] Starting similarity search", flush=True)
     try:
         results_with_scores = vs.similarity_search_with_score(
             query=request.query,
@@ -106,7 +113,9 @@ def query_endpoint(request: QueryRequest) -> List[ChunkResult]:
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Vector store similarity search error: {str(exc)}"
         )
+    print("[query] Similarity search completed", flush=True)
 
+    print("[query] Returning response", flush=True)
     response_chunks: List[ChunkResult] = []
     for doc, score in results_with_scores:
         page_num = doc.metadata.get("page_number")
