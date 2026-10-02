@@ -358,8 +358,8 @@ Anwith_Nestack_Submission/
 
 ## 14. Live Deployment
 
-- **Deployment Status**: Pending deployment (Local execution fully verified)
-- **Deployment URL**: `http://<deployment-host>:8000` *(Placeholder: Pending live host assignment)*
+- **Deployment Status**: Live on Render (Local execution fully verified)
+- **Deployment URL**: https://anwith-nestack-submission.onrender.com/docs
 - **Evaluator Access**:
   - `bishal@nestack.com`
   - `sannidhya@nestack.com`
